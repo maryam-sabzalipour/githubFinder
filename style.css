@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-size: 21px;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+h2 { font-size: 26px ; }
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5px;
+}
+.flex { display: flex; }
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.justify-center { justify-content: center; }
+.shadow {
+  -webkit-box-shadow: -2px 1px 10px -2px #000000; 
+  box-shadow: -2px 1px 10px -2px #000000;
+}
+.btn {
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+.btn-dark {
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  border: 1px solid #333;
+  color: #333;
+  outline: none;
+  background-color: transparent;
+}
+.btn-dark:hover {
+  border: 2px solid transparent ;
+  background-color: #333;
+  color: #fff;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+   'FILL' 1
+}
+.material-symbols-outlined { font-size: 60px; }
+#header {
+  min-height: fit-content;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #333;
+}
+#header #navbar {
+  margin: auto;
+  max-width: 1400px;
+  padding: 10px 15px;
+  justify-content: space-between;
+}
+#header .github-mark{ transition: transform 0.4s ease-in; }
+#header .github-mark:hover {
+  animation: move 0.5s ease-in;
+}
+@keyframes move {
+  0%{ transform: rotate(20deg); }
+  60% { transform: rotate(-30deg); }
+}
+#header .github-logo {
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 30px;
+}
+#header .menu a {
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+#header .menu a:hover{ transform: scaleX(1.2); }
+#hamburger-menu { display: none; }
+#hamburger-menu a span{ font-size: 55px; }
+#responsive-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 1000vh;
+  min-width: 100vw;
+  background-color: rgba(000, 000, 000, 0.8);
+  padding: 30px;
+}
+#responsive-menu .responsive-links {
+  height: 100vh;
+  margin: auto;
+  flex-direction: column;
+}
+#responsive-menu .responsive-links a {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+#responsive-menu a span { font-size: 45px; }
+#search {
+  margin-top: 40px;
+  padding: 20px;
+}
+#search > div {
+  margin: auto;
+  text-align: center;
+}
+#search > div input[type="search"] {
+  width: 30%;
+  padding: 20px 12px;
+  border: 2px solid #888;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+#search > div input[type="search"]::placeholder { color: #333; }
+#search > div input[type="search"]:focus { border: 2px solid #333; }
+#users { padding: 15px; }
+#users .users-container{
+  margin: 50px auto !important;
+  border-radius: 3px;
+  cursor: default;
+}
+#users .users-container .info {
+  padding: 50px;
+  background-color: #333;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  gap: 60px;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+}
+#users .user-avatar {
+  padding: 5px;
+  margin: auto;
+}
+#users .user-avatar img { margin-bottom: 10px; }
+#users .user-info-wrapper {
+margin: auto;
+padding: 20px 5px;
+width: 100%;
+}
+#users .user-info-wrapper .bio { margin: 15px 0 40px 0; }
+#users .user-info-wrapper .user-info-name.flex span, #users .user-info-wrapper .user-info-name.flex p {
+  margin-left: 10px;
+  font-size: 25px;
+  align-self: center;
+}
+#users .extra-info-container {
+  place-content: center;
+  padding: 15px 35px;
+  margin-top: 40px;
+}
+#users .extra-info-container .extra-info {
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 10px;
+}
+#users .extra-info-container .extra-info .extra-info-icon {
+  padding: 10px;
+}
+#users .extra-info-container .extra-info:nth-child(even) {
+  margin: 0 20px;
+}
+#users .extra-info-container .extra-info .extra-info-profile {
+  padding: 10px;
+  flex-direction: column;
+}
+#users .extra-info-container .extra-info .extra-info-profile span {
+  color: #333;
+}
+#users .extra-info-container .extra-info .extra-info-profile p {
+  font-size: 28px;
+  font-weight: bolder;
+}
+#error-msg .alert {
+  width: 80%;
+  padding: 20px;
+  margin: 60px auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#error-msg .alert div {
+  align-self: center;
+  justify-self: start;
+}
+#error-msg .alert div h2 {
+  font-size: 58px;
+  margin-bottom: 10px;
+}
+#error-msg .alert div p { font-size: 28px; }
+.container.repositories-title { padding: 25px; }
+#latest-repos {
+  margin: 10px 0 30px 0;
+  padding: 10px;
+  cursor: default;
+}
+#latest-repos .repo-info {
+  padding: 30px;
+  margin-bottom: 15px;
+}
+#latest-repos .repo-info p {
+  margin: 10px 0 20px 0;
+  font-size: 20px;
+}
+#latest-repos .repo-name .material-symbols-outlined {
+  font-size: 28px;
+  transform: rotate(20deg);
+}
+#latest-repos .repo-title {
+  justify-content: space-between;
+}
+#latest-repos .repo-title .repo-name a {
+  color: #000;
+  margin-left: 2px;
+  transition: all 0.3s ease;
+}
+#latest-repos .repo-title .repo-name a:hover {
+  margin-left: 15px;
+  transform: scale(1.1);
+}
+#latest-repos .repo-reach-container .repo-reach {
+  border: 1px solid #333;
+  text-align: center;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+#latest-repos .repo-reach-container .repo-reach:nth-child(odd) {
+  background-color: #333;
+  color: #fff;
+}
+#latest-repos .repo-reach-container .repo-reach .material-symbols-outlined {
+  font-size: 28px;
+  margin-right: 5px;
+}
+#latest-repos .repo-reach-container .repo-reach:nth-child(even) {
+  margin: 0 20px;
+}
+#spinner {
+  margin-top:20px;
+}
+#about {
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+#about .container {
+  padding: 90px;
+  cursor: default;
+}
+#about h1 { font-size: 42px; }
+#about p {
+  font-size: 24px;
+  margin: 5px 0 20px 0;
+}
+#about a {
+  display: inline-flex;
+  place-items: center;
+}
+#about a .material-symbols-outlined { font-size: 40px; }
+@media screen and (max-width: 992px) {
+  #search > div input[type="search"] { width: 50%; }
+  #users .users-container .info {
+    padding: 20px;
+    grid-template-columns: 3fr 6fr;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #header .github-logo { font-size: 24px; }
+  #search > div input[type="search"] { width: 80%; }
+  #users .users-container .info {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+  #users .user-avatar img { border-radius: 50%; }
+  #users .user-info-wrapper a {
+    display: block;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+  #users .extra-info-container {
+    flex-direction: column;
+    padding: 5px;
+    margin: auto;
+    width: 40%;
+  }
+  #users .extra-info-container .extra-info:nth-child(even) {
+    margin: 0 0 20px 0;
+}
+#users .extra-info-container .extra-info {
+  margin-bottom: 20px;
+  place-content: center;
+  padding: 5px;
+}
+#latest-repos .repo-info .repo-date { display: none; }
+}
+@media screen and (max-width: 700px) {
+  img { display: inline-flex; }
+  .desktop-menu { display: none; }
+  #hamburger-menu { display: flex; }
+  #error-msg .alert {
+    grid-template-columns: 1fr;
+    margin: 10px auto;
+    width: 100%;
+  }
+  #error-msg .alert div {
+    margin-top: 5px;
+    justify-self: center;
+  }
+  #error-msg .alert div h2 { font-size: 44px;}
+  #error-msg .alert div p { font-size: 24px;}
+}
+@media screen and (max-width: 635px) {
+  #users .extra-info-container { width: 60%; }
+}
+@media screen and (max-width: 500px){
+  #header .github-logo { display: none; }
+  #search > div input[type="search"] { width: 100%; }
+  #users .user-info-wrapper a { width: 100%; }
+  #latest-repos { padding: 0; }
+  #latest-repos .repo-title .repo-name a:hover {
+    margin-left: 2px;
+    transform: none;
+  }
+  #latest-repos .repo-title .repo-name span { display: none; }
+  #about .container { padding: 30px; }
+  #about h1 { font-size: 32px; }
+  .btn-dark { padding: 8px; }
+  }
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 19px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  #users .user-info-wrapper .user-info-name.flex span, #users .user-info-wrapper .user-info-name.flex p {
+    font-size: 22px;
+  }
+}
