@@ -1,5 +1,6 @@
 # githubFinder
 A JavaScript app to search GitHub users and see their profiles
+### For the live preview, click the link 👉 https://github-finder-xi-cyan.vercel.app/
 ## Technologies:
 * HTML
 * CSS
