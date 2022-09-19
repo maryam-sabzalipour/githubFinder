@@ -4,7 +4,7 @@ A JavaScript app to search GitHub users and see their profiles (Responsive)
 ## Technologies:
 * HTML
 * CSS
-* JavaScript (ES6) => Fetch API, Arrow Functions
+* JavaScript (ES6, ES7) => { Fetch API, Arrow Functions, Async/Await }
 
 
 ### API link: https://api.github.com/users/
